@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+    <title>White Panda</title>
+    <style type="text/css">
+    body {
+	  padding: 0;
+	  margin: 0;
+	  font-family: 'Muli', sans-serif;
+	  -webkit-transition: all .5s;
+	  transition: all .5s;
+	  background-color: rgba(248,248,248,0.3);
+	}
+    a {
+	  text-decoration: none !important;
+	  color: inherit;
+	}
+	.mt-10{
+		margin-top: 10px;
+	}
+	.mt-50{
+		margin-top: 50px;
+	}
+	.mb-10{
+		margin-bottom:10px;
+	}
+	.mt-50{
+		margin-bottom:50px;
+	}
+	.pt-10{
+		margin-top: 10px;
+	}
+	.pt-50{
+		margin-top: 50px;
+	}
+	.pb-10{
+		margin-bottom:10px;
+	}
+	.pb-50{
+		margin-bottom:50px;
+	}
+
+	.logo {
+	  float: left;
+	  width: 200px;
+	  margin-top: 1%;
+	  font-weight: 400;
+	}
+
+	nav {
+	  margin-right: 2%;
+	}
+
+	.nav-bar {
+	  padding: 0;
+	  margin: 0;
+	  float: right;
+	  -webkit-transition: max-height 0.5s;
+	  transition: max-height 0.5s;
+	}
+	.nav-bar li {
+	  display: inline-block;
+	  padding: 20px 10px;
+	}
+	.nav-bar a {
+	  text-transform: uppercase;
+	}
+	.header{
+		background-color: #fff;
+		box-shadow: 0 0px 4px 3px rgba(0, 0, 0, 0.1), 0 -5px 2px 2px rgba(0, 0, 0, 0.1);
+	}
+	@media only screen and (max-width: 630px) {
+	  .nav-bar li {
+	    padding: 30px 5px;
+	  }
+
+	  .nav-bar a {
+	    padding: 0;
+	  }
+
+	}
+	@media only screen and (max-width: 480px) {
+	  nav {
+	    margin-right: 1%;
+	  }
+
+	  .nav-bar a {
+	    font-size: .7em;
+	  }
+	}
+	.rad-menu-badge {
+	  position: absolute;
+	  min-width: 20px;
+	  min-height: 20px;
+	  line-height: 20px;
+	  font-weight: bold;
+	  padding: 2px;
+	  color: white;
+	  border-radius: 100%;
+	  font-size: 12px;
+	  background: #f25c69 ;
+	  display: inline-block;
+	  text-align: center;
+	  top: -10px;
+	  left: 20px;
+	  z-index: 1;
+	}
+	.rad-menu-item {
+	  position: relative;
+	  padding: 0 5px;
+	  line-height: 30px;
+	  height: 30px;
+	  color: #89949B;
+	  z-index: 5;
+	  display: inline-block;
+	}
+	@media screen and (max-width: 850px) {
+	  .rad-menu-badge {
+	    top: -3px;
+	  }
+	  .rad-menu-badge {
+	    font-size: 10px;
+	    min-width: 15px;
+	    min-height: 15px;
+	    line-height: 15px;
+	  }
+	}
+
+	.order_button{
+		background-color: transparent;
+		padding:10px 20px;
+		border: 1px solid #3ebcb3;
+		color: #3ebcb3;
+		border-radius:5px;
+		font-weight: 600;
+	}
+	.order_btn{
+		background-color: transparent;
+		padding:5px 40px;
+		border: 1px solid #3ebcb3;
+		color: #3ebcb3;
+		border-radius:5px;
+		font-weight: 600;
+	}
+	.card {
+	  background: #fff;
+	  border-radius: 10px;
+	  display: inline-block;
+	  height: 270px;
+	  margin: 1rem;
+	  position: relative;
+	  width: 350px;
+	  border: none;
+	  margin-bottom: 50px;
+	}
+
+	.card-1 {
+		padding: 30px;
+	    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	    border: none;
+	}
+
+	.card-1:hover {
+		padding: 30px;
+		box-shadow:0 20px 50px rgba(238, 245, 245, 1);
+	    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	    border: none;
+	    color: #3ebcb3;
+	}
+
+	.box-heading{
+		font-weight: 600;
+		font-size: 18px;
+	}
+
+	.content-box{
+		background-color: #eef5f5;
+		padding:20px 30px;
+		margin-left:15px;
+		margin-right: 15px;
+	}
+	.box-text{
+		color: #9b9b9b;
+		line-height: 1.6em;
+		padding-top: 20px;
+	}
+
+	.bg-circle
+	{
+	  display: inline-block;
+	  width: 60px;
+	  height: 60px;
+	  padding: 14px 4px;
+	  text-align: center;
+	  border-radius: 50%;
+	}
+
+	.bg-circle-outline
+	{
+	  width: 50px;
+	  height: 50px;
+	  padding: 8px 2px;
+	  border: 2px solid;
+	  border-color: smoke;
+	  border-radius: 50%;
+	}
+
+    </style>
+</head>
+<body>
+<div class="header">
+	<div class="container">
+		<div class="row">
+			<img class="logo" src="https://www.ecell.in/esummit/expo/speakers/8.png">
+			<nav>
+				<ul class="nav-bar">
+					<li>
+						<a class="rad-menu-item" href="#"><i class="fa fa-bell-o fa-2x"><span class="rad-menu-badge">699</span></i></a>
+					</li>
+					<li style="position: relative;top: -10px;"><a href="#"><span style="background-color: lightgreen;padding:12px;border-radius: 50%;font-weight: 600;color: #fff">AB</span></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row pt-50">
+		<h1>Content Store</h1>
+		<div class="content-box mt-50">
+			<h4 style="color: #3ebcb3">Got bulk orders or almost similar orders? Fill the order brief in an excel sheet</h4>
+			<p style="color: #9b9b9b;line-height: 1.6em">If you're wondering about an easy way to place orders in emarge numbers, we provide a way customized just for that.<br> Download our excel sheet, and fill the order brief in the prescriped format and submit. In case you need any help,<br> <u>we are just a click away to assist you in placing your order</u></p>
+			<button type="button" class="order_button mt-10">Order via Excel Sheet</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="card card-1">
+		        <div class="row">
+			        <div class="col-md-4">
+			            <img style="border-radius:50%" src="http://via.placeholder.com/65x65">
+			        </div>
+			        <div class="col-md-8">
+			            <div>
+			            	<h4 class="box-heading">Blog / Article</h4>
+			                <p style="font-size: 16px">from ₹ 1000</p>
+			            </div>
+			        </div>
+		        </div>
+				<p class="box-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users.</p>
+				<button type="button" class="order_btn mt-10">Order</button>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card card-1">
+		        <div class="row">
+			        <div class="col-md-4">
+			            <img style="border-radius:50%" src="http://via.placeholder.com/65x65">
+			        </div>
+			        <div class="col-md-8">
+			            <div>
+			            	<h4 class="box-heading">Newsletter / E-mailer</h4>
+			                <p style="font-size: 16px">from ₹ 1000</p>
+			            </div>
+			        </div>
+		        </div>
+				<p class="box-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users.</p>
+				<button type="button" class="order_btn mt-10">Order</button>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card card-1">
+		        <div class="row">
+			        <div class="col-md-4">
+			            <img style="border-radius:50%" src="http://via.placeholder.com/65x65">
+			        </div>
+			        <div class="col-md-8">
+			            <div>
+			            	<h4 class="box-heading">Whitepaper</h4>
+			                <p style="font-size: 16px">from ₹ 2000</p>
+			            </div>
+			        </div>
+		        </div>
+				<p class="box-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users.</p>
+				<button type="button" class="order_btn mt-10">Order</button>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card card-1">
+		        <div class="row">
+			        <div class="col-md-4">
+			            <img style="border-radius:50%" src="http://via.placeholder.com/65x65">
+			        </div>
+			        <div class="col-md-8">
+			            <div>
+			            	<h4 class="box-heading">e-book</h4>
+			                <p style="font-size: 16px">from ₹ 1000</p>
+			            </div>
+			        </div>
+		        </div>
+				<p class="box-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users.</p>
+				<button type="button" class="order_btn mt-10">Order</button>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card card-1">
+		        <div class="row">
+			        <div class="col-md-4">
+			            <img style="border-radius:50%" src="http://via.placeholder.com/65x65">
+			        </div>
+			        <div class="col-md-8">
+			            <div>
+			            	<h4 class="box-heading">Report / Guide</h4>
+			                <p style="font-size: 16px">from ₹ 1000</p>
+			            </div>
+			        </div>
+		        </div>
+				<p class="box-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users.</p>
+				<button type="button" class="order_btn mt-10">Order</button>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card card-1">
+		        <div class="row">
+			        <div class="col-md-4">
+			            <img style="border-radius:50%" src="http://via.placeholder.com/65x65">
+			        </div>
+			        <div class="col-md-8">
+			            <div>
+			            	<h4 class="box-heading">Product Description</h4>
+			                <p style="font-size: 16px">from ₹ 500</p>
+			            </div>
+			        </div>
+		        </div>
+				<p class="box-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users.</p>
+				<button type="button" class="order_btn mt-10">Order</button>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card card-1">
+		        <div class="row">
+			        <div class="col-md-4">
+			            <img style="border-radius:50%" src="http://via.placeholder.com/65x65">
+			        </div>
+			        <div class="col-md-8">
+			            <div>
+			            	<h4 class="box-heading">Website Content</h4>
+			                <p style="font-size: 16px">from ₹ 1000</p>
+			            </div>
+			        </div>
+		        </div>
+				<p class="box-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users.</p>
+				<button type="button" class="order_btn mt-10">Order</button>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card card-1">
+		        <div class="row">
+			        <div class="col-md-4">
+			            <img style="border-radius:50%" src="http://via.placeholder.com/65x65">
+			        </div>
+			        <div class="col-md-8">
+			            <div>
+			            	<h4 class="box-heading">Video Script</h4>
+			                <p style="font-size: 16px">from ₹ 1000</p>
+			            </div>
+			        </div>
+		        </div>
+				<p class="box-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users.</p>
+				<button type="button" class="order_btn mt-10">Order</button>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card card-1">
+		        <div class="row">
+			        <div class="col-md-4">
+			            <img style="border-radius:50%" src="http://via.placeholder.com/65x65">
+			        </div>
+			        <div class="col-md-8">
+			            <div>
+			            	<h4 class="box-heading">Company Profile / Brochure</h4>
+			                <p style="font-size: 16px">from ₹ 2000</p>
+			            </div>
+			        </div>
+		        </div>
+				<p class="box-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users.</p>
+				<button type="button" class="order_btn mt-10">Order</button>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card card-1">
+		        <div class="row">
+			        <div class="col-md-4">
+			            <img style="border-radius:50%" src="http://via.placeholder.com/65x65">
+			        </div>
+			        <div class="col-md-8">
+			            <div>
+			            	<h4 class="box-heading">Press Release</h4>
+			                <p style="font-size: 16px">from ₹ 1000</p>
+			            </div>
+			        </div>
+		        </div>
+				<p class="box-text">Typically 450-400 words, an e-book is perfect for your target audience ranging from prospective customers to users.</p>
+				<button type="button" class="order_btn mt-10">Order</button>
+			</div>
+		</div>
+
+	</div>
+	<div class="row" style="padding-top: 50px">
+		<div class="text-center">
+            <a href="" style="padding: 5px 30px;color: #9b9b9b"><i class="fa fa-twitter fa-3x"></i></a>
+	        <a href="" style="padding: 5px 30px;color: #9b9b9b"><i class="fa fa-linkedin fa-3x"></i></a>
+	        <a href="" style="padding: 5px 30px;color: #9b9b9b"><i class="fa fa-instagram fa-3x"></i></a>
+	        <a href="" style="padding: 5px 30px;color: #9b9b9b"><i class="fa fa-facebook fa-3x"></i></a>
+
+	        <h4 style="padding-top: 15px;line-height: 1.5em;color: #9b9b9b;font-size: 16px">
+	        	Copyright @ 2019 White Panda Media Pvt. Ltd.<br>
+				All rights reserved
+	        </h4>
+
+	        <h4 style="padding-top: 15px;line-height: 1.5em;color: #9b9b9b;font-size: 16px">
+	        	<a>Privacy Policy</a> | <a>Terms of Service</a> | <a>Service Agreement</a> | <a>Contact Us</a>
+	        </h4>
+		</div>
+	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
